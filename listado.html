@@ -4,10 +4,28 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Listado</title>
-    <link href="CSS/listado.css">
-    <script src="JS/listado.js"></script>
+    <link rel="stylesheet" href="CSS/listado.css">
 </head>
 <body>
-    <h1>Aqui va el listado</h1>
+    <h1>Listado de facturas anteriores</h1>
+
+    <table id="listado">
+        <tr>
+            <th id="num">Numero</th>
+            <th id="nom">Nombre</th>
+            <th id="eliminar">Eliminar</th>
+        </tr>
+        <tr>
+            <td>Nº 1</td>
+            <td><a href="añadir.html">Pago mcflurry Aimar, Lucia y Leyre</a></td>
+            <td>Eliminar</td>
+        </tr>
+    </table>
+    <div id="botones">
+        <button class="button-17" role="button" id="btnAñadir">Añadir</button>
+        <button class="button-17" role="button" id="btnLimpiar">Limpiar lista</button>
+    </div>
+    
+    <script src="JS/listado.js"></script>
 </body>
 </html>
