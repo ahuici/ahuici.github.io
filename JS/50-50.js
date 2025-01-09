@@ -53,7 +53,7 @@ window.addEventListener("load", function () {
     btnAyuda.setAttribute("role","button");
     btnAyuda.setAttribute("id","btnAyuda");
     btnAyuda.addEventListener("click",function(){
-        location.href = "ayuda.html"
+        location.href = "Ayuda/ayuda50-50.html"
     })
 
     let btnCalc = this.document.createElement("button");
