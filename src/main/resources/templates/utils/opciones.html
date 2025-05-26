@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.w3.org/1999/xhtml">
+<head>
+  <meta charset="UTF-8">
+  <title>Summitrack</title>
+  <link rel="stylesheet" href="/css/opciones.css">
+  <link rel="stylesheet" href="/css/header.css">
+  <link rel="icon" type="image/png" th:href="@{/images/IconoSummitrack.png}">
+</head>
+<body>
+  <!-- Contenido principal -->
+  <div th:insert="fragments/header :: header"></div>
+
+  <h1 th:text="${titulo}"></h1>
+
+  <div class="divOpciones">
+
+    <a class="opcion" th:href="@{/{opt}/monte(opt=${opcion})}">
+      <img src="https://www.valleedossau.com/medias/images/prestataires/randonneehiver-picdossau8-poums64-7716.jpg" />
+      <p>Montes</p>
+    </a>
+
+    <a class="opcion" th:href="@{/{opt}/ascension(opt=${opcion})}">
+      <img src="https://i0.wp.com/atrochando.com/wp-content/uploads/2019/12/WhatsApp-Image-2019-12-17-at-21.59.03-1.jpeg?resize=1536%2C1152&ssl=1" />
+      <p>Ascensiones</p>
+    </a>
+
+    <a class="opcion" th:href="@{/{opt}/persona(opt=${opcion})}">
+      <img src="https://img.interempresas.net/fotos/4269013.jpeg" />
+      <p>Personas</p>
+    </a>
+
+    <a class="opcion" th:href="@{/{opt}/calendario(opt=${opcion})}">
+      <img src="https://viajes.nationalgeographic.com.es/medio/2021/06/11/istock-1284549717_dc5c108b_1254x836.jpg" />
+      <p>Calendario</p>
+    </a>
+
+  </div>
+
+
+</body>
+</html>

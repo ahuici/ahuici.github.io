@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="es" xmlns:th="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="UTF-8">
+    <title>Summitrack</title>
+    <link rel="stylesheet" href="/css/index.css">
+    <link rel="icon" type="image/png" th:href="@{/images/IconoSummitrack.png}">
+</head>
+<body>
+<div class="background-container"></div>
+<main>
+    <h1>Obteniendo su ubicación</h1>
+</main>
+
+<script>
+    function getLocation() {
+        if (navigator.geolocation) {
+            navigator.geolocation.getCurrentPosition(showPosition, showError);
+        }
+    }
+
+    function showPosition(position) {
+        var lat = position.coords.latitude;
+        var lon = position.coords.longitude;
+
+        fetch('/guardar-ubicacion', {
+            method: 'POST',
+            headers: {
+                'Content-Type': 'application/json'
+            },
+            body: JSON.stringify({
+                latitud: lat,
+                longitud: lon
+            })
+        })
+        .then(response => response.json())
+        .then(data => console.log(data))
+        .catch(error => console.error('Error:', error));
+
+        /*<![CDATA[*/
+        var id = [[${id}]];
+        var lat = position.coords.latitude;  // Asegúrate de que esto esté definido antes
+        var lon = position.coords.longitude;
+
+        setTimeout(function() {
+            window.location.href = '/monte/monte/comoLlegar?id=' + id + '&latitud=' + lat + '&longitud=' + lon;
+        }, 120);
+        /*]]>*/
+    }
+
+    function showError(error) {
+        switch(error.code) {
+            case error.PERMISSION_DENIED:
+                alert("El usuario denegó la solicitud de geolocalización. No se puede calcular la ascension, redirigiendo.");
+                break;
+            case error.POSITION_UNAVAILABLE:
+                alert("La información de ubicación no está disponible. No se puede calcular la , redirigiendo.");
+                break;
+            case error.TIMEOUT:
+                alert("Se alcanzó el tiempo máximo de espera para obtener la ubicación. No se puede calcular la ascension, redirigiendo.");
+                break;
+            case error.UNKNOWN_ERROR:
+                alert("Se produjo un error desconocido. No se puede calcular la ascension, redirigiendo.");
+                break;
+        }
+        setTimeout(function() {
+            window.location.href = "/ver/monte";  // Cambia la URL a la página de destino
+        }, 80); // 5 segundos de espera antes de redirigir
+    }
+
+
+    window.addEventListener('load', getLocation);
+</script>
+
+</body>
+</html>

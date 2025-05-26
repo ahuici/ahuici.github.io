@@ -1,0 +1,58 @@
+/* Asegurar que el contenido principal esté centrado verticalmente */
+main {
+    flex-grow: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+/* Estilo para el cuerpo (body) sin la imagen */
+body {
+    margin: 0;
+    font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+    height: 100vh;  /* Asegura que el body ocupe toda la altura */
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between; /* Espacios entre la cabecera y el contenido principal */
+    color: #333333;
+    background-color: #F5F5F5; /* Fondo blanco para el contenido */
+}
+
+/* Estilo global para el contenedor de la imagen de fondo */
+.background-container {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-image: url('https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRGuJ6Gx9fGfVlePoz6J3HWJc3QwKMl_0t-6A&s'); /* URL de la imagen */
+    background-size: cover; /* La imagen cubre toda la pantalla */
+    background-position: center; /* Centra la imagen */
+    background-repeat: no-repeat; /* Impide que la imagen se repita */
+    z-index: -1; /* Coloca la imagen detrás del contenido */
+    filter: blur(11px);
+}
+
+/* Estilo para el título */
+main h1 {
+    font-size: 5em;  /* Mayor tamaño del texto */
+    text-align: center;
+    margin-top: 150px; /* Espacio superior para que el título esté centrado en la pantalla */
+    font-weight: bold;
+    text-shadow: 3px 3px 15px rgba(0, 0, 0, 0.7), 0 0 25px rgba(76, 175, 80, 0.8); /* Sombra más fuerte y resplandor */
+    color: rgb(76, 175, 80); /* Verde medio para el título */
+}
+
+/* Estilo general para enlaces (en caso de tener más elementos en la página) */
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+/* Diseño responsivo para dispositivos móviles */
+@media (max-width: 768px) {
+    main h1 {
+        font-size: 3em; /* Título más pequeño en pantallas pequeñas */
+    }
+}

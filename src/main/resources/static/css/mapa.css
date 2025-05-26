@@ -1,0 +1,250 @@
+body {
+    margin: 0;
+    font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+/* TODO MAPA*/
+
+#map {
+    position: relative;
+    top: 120px;
+    height: calc(85vh - 120px); /* ajusta según la altura real del header */
+    width: 90%;
+    margin: 0 auto; /* centra el mapa */
+    padding: 20px; /* espacio interno en lugar de margen */
+    box-sizing: border-box; /* Asegura que el padding no afecte al ancho total */
+
+    border: 3px solid #4CAF50; /* Marco de color verde */
+    border-radius: 12px; /* Bordes redondefados */
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1); /* Sombra suave para darle profundidad */
+    background-color: white; /* Fondo blanco */
+    z-index: 0;
+}
+
+#mapRuta{
+    position: relative;
+    top: 120px;
+    height: calc(90vh - 120px); /* ajusta según la altura real del header */
+    width: 90%;
+    margin: 0 auto; /* centra el mapa */
+    padding: 20px; /* espacio interno en lugar de margen */
+    box-sizing: border-box; /* Asegura que el padding no afecte al ancho total */
+
+    border: 3px solid #4CAF50; /* Marco de color verde */
+    border-radius: 12px; /* Bordes redondeados */
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1); /* Sombra suave para darle profundidad */
+    background-color: white; /* Fondo blanco */
+    z-index: 0;
+}
+
+/* TODO FIN MAPA*/
+
+/* TODO LEYENDA */
+
+#explicacion {
+    display: flex; /* Activa el modelo de flexbox */
+    justify-content: space-between; /* Distribuye el contenido en la misma línea con espacio entre ellos */
+    width: 90%;
+    margin: 20px auto;
+    margin-top: 140px;
+    padding: 20px;
+    top: 50px;
+    background-color: white; /* Fondo blanco para que coincida con el mapa */
+    border: 3px solid #4CAF50; /* Mismo color de borde que el mapa */
+    border-radius: 12px; /* Bordes redondeados */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Sombra suave para el contenedor */
+    font-family: 'Arial', sans-serif; /* Tipografía similar al mapa */
+}
+
+#explicacion p {
+    font-size: 16px;
+    color: #333; /* Color del texto */
+    line-height: 1.5;
+    margin: 0; /* Elimina márgenes predeterminados */
+    display: flex;
+    align-items: center;
+}
+
+#explicacion b {
+    color: #4CAF50; /* El texto en negrita tendrá el color verde */
+}
+
+/* TODO FIN LEYENDA */
+
+/* TODO CHECKBOX */
+input[type="checkbox"] {
+    width: 50px; /* Más ancho para mayor visibilidad */
+    height: 25px;
+    appearance: none;
+    background-color: #ccc;
+    border-radius: 15px;
+    position: relative;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    vertical-align: middle;
+    box-shadow: inset 0 0 5px rgba(0,0,0,0.2);
+    margin-left: 13px;
+}
+
+input[type="checkbox"]::before {
+    content: "";
+    position: absolute;
+    width: 22px;
+    height: 22px;
+    border-radius: 50%;
+    background-color: white;
+    top: 1.5px;
+    left: 2px;
+    transition: transform 0.3s ease;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.2);
+
+}
+
+input[type="checkbox"]:checked {
+    background-color: #4CAF50;
+}
+
+input[type="checkbox"]:checked::before {
+    transform: translateX(25px); /* Desplaza el círculo hacia la derecha */
+}
+
+/* TODO FIN CHECKBOX*/
+
+/* TODO Interrogante ayuda */
+.tooltip-container {
+    position: relative;
+    display: inline-block;
+  }
+
+  .tooltip-icon {
+    background-color: #007BFF;
+    color: white;
+    border-radius: 50%;
+    padding: 0.2em 0.5em;
+    font-weight: bold;
+    font-size: 0.9em;
+    cursor: help;
+    user-select: none;
+  }
+
+  .tooltip-box {
+    display: none;
+    position: absolute;
+    bottom: 125%; /* Cambiado para que se muestre arriba */
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: #f9f9f9;
+    color: #333;
+    padding: 8px;
+    border-radius: 6px;
+    border: 1px solid #ccc;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.15);
+    white-space: normal;
+    width: 180px;
+    font-size: 0.85em;
+    z-index: 1000;
+  }
+
+  .tooltip-container:hover .tooltip-box {
+    display: block;
+  }
+/* TODO Fin interrogante ayuda*/
+
+#aviso b {
+    color: red;
+}
+
+/* TODO FLECHA*/
+/* Estilo para el enlace de "Atrás" */
+.atras {
+    position: absolute; /* Posiciona el enlace en relación al contenedor más cercano */
+    top: 20px; /* Espacio de 20px desde la parte superior */
+    left: 20px; /* Espacio de 20px desde la parte izquierda */
+    display: inline-block; /* Hace que el enlace sea un bloque en línea */
+    color: #4CAF50; /* Color verde */
+    font-size: 14px; /* Tamaño pequeño para el texto */
+    font-weight: bold; /* Texto en negrita */
+    text-decoration: none; /* Elimina el subrayado */
+    padding: 8px 12px; /* Añade un pequeño espaciado interno */
+    border-radius: 5px; /* Bordes redondeados */
+    background-color: #f5f5f5; /* Fondo gris claro */
+    transition: background-color 0.3s ease, transform 0.3s ease; /* Efectos de transición */
+    margin-top: 125px;
+}
+
+/* Efecto hover para el enlace "Atras" */
+.atras:hover {
+    background-color: #e0e0e0; /* Fondo ligeramente más oscuro */
+    transform: translateY(-2px); /* Desplazamiento hacia arriba al pasar el ratón */
+}
+
+/* Efecto activo para el enlace "Atras" */
+.atras:active {
+    transform: translateY(1px); /* Desplazamiento hacia abajo cuando se hace clic */
+}
+/* TODO FIN FLECHA */
+
+/* TODO CREAR ASCENSION BOTON */
+.btnCrearRuta {
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    padding: 8px 16px;
+    font-size: 16px;
+    font-weight: bold;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s, transform 0.3s;
+}
+
+/* Efectos al pasar el ratón y al hacer clic */
+.btnCrearRuta:hover {
+    background-color: #388E3C;
+    transform: translateY(-2px);
+}
+
+.btnCrearRuta:active {
+    background-color: #2C6F2F;
+    transform: translateY(1px);
+}
+/* TODO FIN CREAR ASCENSION BOTON */
+/* TODO DESCARGAR */
+.boton-inferior {
+    position: fixed;
+    bottom: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 1000;
+    background: none;
+    padding: 0;
+    border: none;
+}
+
+.btnCrearRuta {
+    background-color: #28a745; /* verde */
+    color: white;
+    padding: 10px 20px;
+    font-size: 16px;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    box-shadow: 0 2px 6px rgba(0,0,0,0.2);
+    transition: background-color 0.3s ease;
+}
+
+.btnCrearRuta:hover {
+    background-color: #218838; /* verde más oscuro */
+}
+
+#limpiar {
+    background-color: #2196F3;
+    margin-left: 16px;
+}
+/* TODO FIN DESCARGAR*/

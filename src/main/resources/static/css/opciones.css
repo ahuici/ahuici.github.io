@@ -1,0 +1,101 @@
+
+/* Reinicios y caja */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Body */
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #F5F5F5;
+    color: #333333;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    height: 100vh;
+    text-align: center;
+}
+
+/* Contenedor de opciones */
+.divOpciones {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);  /* 4 columnas de igual tamaño */
+    gap: 30px;  /* Espacio entre las tarjetas */
+    max-width: 1100px;  /* Limita el ancho máximo del contenedor */
+    padding: 20px;
+    margin: 5px auto 0;  /* Centra el contenedor horizontalmente */
+    margin-top: 15px;
+    width: 100%;  /* Asegura que el contenedor ocupe el 100% del ancho disponible */
+    justify-content: center;  /* Centra las tarjetas horizontalmente */
+}
+
+/* Tarjetas */
+.opcion {
+    display: inline-block;
+    padding: 20px;
+    background-color: #4CAF50;
+    color: white;
+    font-size: 18px;
+    text-decoration: none;
+    border-radius: 10px;
+    width: 300px;
+    text-align: center;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+.opcion img {
+    width: 250px;
+    height: 200px;
+    border-radius: 8px;
+    margin-bottom: 10px;
+}
+.opcion p {
+  padding: 15px;
+  font-size: 18px;
+}
+.opcion a {
+  display: inline-block;
+  margin: 15px 0 20px;
+  padding: 8px 15px;
+  background-color: #388E3C;
+  color: white;
+  text-decoration: none;
+  border-radius: 5px;
+  font-weight: bold;
+  transition: background-color .3s, transform .3s;
+  width: 50px;
+}
+.opcion:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 6px 12px rgba(0,0,0,0.2);
+}
+.opcion a:hover {
+  background-color: #2C6F2F;
+}
+
+/* Mensaje de error */
+.error {
+  color: red;
+  margin: 15px 0;
+}
+
+/* Títulos */
+/* Títulos */
+h1 {
+    color: #4CAF50;
+    font-size: 2.5em;
+    font-weight: bold;
+    margin-top: 155px; /* Espacio debajo del header fijo */
+    margin-bottom: 10px;
+    text-align: center;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .divOpciones {
+    grid-template-columns: 1fr;
+    gap: 15px;
+  }
+}

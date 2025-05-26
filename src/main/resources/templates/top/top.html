@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="UTF-8">
+    <title>Summitrack</title>
+    <link rel="stylesheet" href="/css/top.css">
+    <link rel="stylesheet" href="/css/header.css">
+    <link rel="icon" type="image/png" th:href="@{/images/IconoSummitrack.png}">
+</head>
+<body>
+
+  <div th:insert="fragments/header :: header"></div>
+
+  <div id="local">
+    <h1>Local</h1>
+
+    <div class="distancia">
+      <h2>Distancia</h2>
+      <table>
+        <tr class="cabecera">
+          <th>Nombre</th>
+          <th>Distancia</th>
+        </tr>
+        <tr th:each="distancia : ${distanciasLocal}">
+          <td th:text="${distancia.nombre}"></td>
+          <td th:text="${distancia.distancia} + ' km'"></td>
+        </tr>
+      </table>
+    </div>
+
+    <div class="desnivel">
+      <H2>Desnivel</H2>
+      <table>
+        <tr class="cabecera">
+          <th>Nombre</th>
+          <th>Desnivel</th>
+        </tr>
+        <tr th:each="desnivel : ${desnivelesLocal}">
+          <td th:text="${desnivel.nombre}"></td>
+          <td th:text="${desnivel.desnivel} + ' m'"></td>
+        </tr>
+      </table>
+    </div>
+
+    <div class="cimas">
+      <h2>Cimas</h2>
+      <table>
+        <tr class="cabecera">
+          <th>Nombre</th>
+          <th>Cimas</th>
+        </tr>
+        <tr th:each="cima : ${cimasLocal}">
+          <td th:text="${cima.nombre}"></td>
+          <td th:text="${cima.cimas}"></td>
+        </tr>
+      </table>
+    </div>
+  </div>
+
+  <div id="online">
+    <h1>Global</h1>
+
+    <div class="distancia">
+      <h2>Distancia</h2>
+      <table>
+        <tr class="cabecera">
+          <th>Nombre</th>
+          <th>Distancia</th>
+        </tr>
+        <tr th:each="distancia : ${distanciasGlobal}">
+          <td th:text="${distancia.nombre}"></td>
+          <td th:text="${distancia.distancia} + ' km'"></td>
+        </tr>
+      </table>
+    </div>
+
+    <div class="desnivel">
+      <H2>Desnivel</H2>
+      <table>
+        <tr class="cabecera">
+          <th>Nombre</th>
+          <th>Desnivel</th>
+        </tr>
+        <tr th:each="desnivel : ${desnivelesGlobal}">
+          <td th:text="${desnivel.nombre}"></td>
+          <td th:text="${desnivel.desnivel} + ' m'"></td>
+        </tr>
+      </table>
+    </div>
+
+    <div class="cimas">
+      <h2>Cimas</h2>
+      <table>
+        <tr class="cabecera">
+          <th>Nombre</th>
+          <th>Cimas</th>
+        </tr>
+        <tr th:each="cima : ${cimasGlobal}">
+          <td th:text="${cima.nombre}"></td>
+          <td th:text="${cima.cimas}"></td>
+        </tr>
+      </table>
+    </div>
+  </div>
+
+</body>
+</html>

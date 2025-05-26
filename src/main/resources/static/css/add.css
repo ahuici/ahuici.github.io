@@ -1,0 +1,213 @@
+/* Reset de márgenes y padding para todo */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Cuerpo general sin flexbox centrado */
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #F5F5F5;
+    color: #333;
+    margin: 0;
+}
+
+/* Contenedor para centrar el contenido */
+.contenedorAdd {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    flex-direction: column;
+    padding-top: 100px; /* deja espacio para el header fijo */
+}
+
+/* Estilo para el formulario */
+form {
+    background-color: white;
+    padding: 30px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    width: 100%;
+    max-width: 500px;
+    margin-top: 30px; /* Espacio suficiente para no quedar cubierto por la cabecera */
+    margin-bottom: 40px; /* Aseguramos que haya espacio abajo */
+}
+
+/* Título */
+h1 {
+    text-align: center;
+    color: #4CAF50;
+    margin-bottom: 20px;
+}
+
+/* Estilo para los párrafos */
+p {
+    margin-bottom: 15px;
+}
+
+/* Estilo para los inputs y selects */
+input[type="text"], input[type="number"], select {
+    width: 100%;
+    padding: 10px;
+    margin-top: 5px;
+    border-radius: 5px;
+    border: 1px solid #ddd;
+    font-size: 16px;
+    color: #333;
+}
+
+input[type="text"]:focus, input[type="number"]:focus, select:focus {
+    border-color: #4CAF50;
+    outline: none;
+}
+
+/* Estilo para el botón */
+button {
+    width: 100%;
+    padding: 12px;
+    background-color: #4CAF50;
+    color: white;
+    font-size: 18px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+button:hover {
+    background-color: #388E3C;
+}
+
+button:focus {
+    outline: none;
+}
+
+/* Estilo para el enlace "Salir" */
+.buttons-container a {
+    width: 100%; /* Ocupa todo el ancho del contenedor */
+    padding: 12px;
+    background-color: #4CAF50; /* Fondo verde */
+    color: white;
+    font-size: 18px;
+    font-weight: bold;
+    text-align: center; /* Centra el texto */
+    border-radius: 5px;
+    text-decoration: none;
+    display: inline-block;
+    transition: background-color 0.3s ease;
+    margin-top: 20px; /* Margen superior */
+    margin-bottom: 40px; /* Margen inferior más grande */
+}
+
+/* Estilo cuando se pasa el ratón por encima */
+.buttons-container a:hover {
+    background-color: #388E3C; /* Fondo más oscuro al pasar el ratón */
+}
+
+.buttons-container a:active {
+    transform: translateY(1px); /* Efecto al hacer clic */
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+/* Diseño responsivo para dispositivos móviles */
+@media (max-width: 768px) {
+    h1 {
+        font-size: 2em; /* Título más pequeño en pantallas pequeñas */
+    }
+}
+
+/* Estilo para el input tipo date */
+input[type="date"] {
+    width: 100%;
+    padding: 10px;
+    margin-top: 5px;
+    border-radius: 5px;
+    border: 1px solid #ddd;
+    font-size: 16px;
+    color: #333;
+    background-color: white;
+    cursor: pointer;
+}
+
+/* Estilo cuando el input de fecha está en foco */
+input[type="date"]:focus {
+    border-color: #4CAF50;
+    outline: none;
+}
+
+/* Para que el icono del calendario herede el color del texto */
+input[type="date"]::-webkit-calendar-picker-indicator {
+    filter: invert(40%) sepia(80%) saturate(300%) hue-rotate(90deg);
+    cursor: pointer;
+}
+
+/* Ajustes responsivos */
+@media (max-width: 768px) {
+    input[type="date"] {
+        font-size: 14px;
+        padding: 8px;
+    }
+}
+
+
+/* TODO CHECKBOX */
+input[type="checkbox"] {
+    width: 50px; /* Más ancho para mayor visibilidad */
+    height: 25px;
+    appearance: none;
+    background-color: #ccc;
+    border-radius: 15px;
+    position: relative;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    vertical-align: middle;
+    box-shadow: inset 0 0 5px rgba(0,0,0,0.2);
+    margin-left: 13px;
+}
+
+input[type="checkbox"]::before {
+    content: "";
+    position: absolute;
+    width: 22px;
+    height: 22px;
+    border-radius: 50%;
+    background-color: white;
+    top: 1.5px;
+    left: 2px;
+    transition: transform 0.3s ease;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.2);
+
+}
+
+input[type="checkbox"]:checked {
+    background-color: #4CAF50;
+}
+
+input[type="checkbox"]:checked::before {
+    transform: translateX(25px); /* Desplaza el círculo hacia la derecha */
+}
+
+/* TODO FIN CHECKBOX*/
+
+/* Estilo para el input tipo email */
+input[type="email"] {
+    width: 100%;
+    padding: 10px;
+    margin-top: 5px;
+    border-radius: 5px;
+    border: 1px solid #ddd;
+    font-size: 16px;
+    color: #333;
+    background-color: white;
+}
+
+/* Estilo cuando el input de email está en foco */
+input[type="email"]:focus {
+    border-color: #4CAF50;
+    outline: none;
+}
