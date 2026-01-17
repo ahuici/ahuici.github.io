@@ -15,7 +15,7 @@ if not exist "%NIR%" (
 "%NIR%" mutesysvolume 0
 "%NIR%" setsysvolume 65535
 
-powershell -WindowStyle Hidden -NoProfile -Command "Add-Type -AssemblyName System.Speech; $speak = New-Object System.Speech.Synthesis.SpeechSynthesizer; $speak.Volume = 100; $speak.Speak('Hola, soy un hacker. Tengo un windows en un mac. KALISE PARA TODOS. Quien quiere un kalise???');"
+powershell -WindowStyle Hidden -NoProfile -Command "Add-Type -AssemblyName System.Speech; $speak = New-Object System.Speech.Synthesis.SpeechSynthesizer; $speak.Volume = 100; $speak.Speak('KALISE PARA TODOS. Quien quiere un kalise???');"
 
 rundll32.exe user32.dll,LockWorkStation
 
@@ -46,5 +46,3 @@ set "IP=%IP: =%"
 set "FILE=%TEMP%\mi_ip.txt"
 echo %USERNAME%, se que eres fan de Iniesta. Yo tambien, pero ahora que tengo tu ip %IP% te voy a robar los datos bancarios > "%FILE%"
 start notepad "%FILE%"
-
-@REM prueba
