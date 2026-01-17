@@ -47,4 +47,4 @@ set "FILE=%TEMP%\mi_ip.txt"
 echo %USERNAME%, se que eres fan de Iniesta. Yo tambien, pero ahora que tengo tu ip %IP% te voy a robar los datos bancarios > "%FILE%"
 start notepad "%FILE%"
 
-
+@REM prueba
